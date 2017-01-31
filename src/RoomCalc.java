@@ -23,12 +23,13 @@ public class RoomCalc {
         while (answer == 1) {
 
 
-            System.out.println("How long is the room? "); // User enters the length of the room
+            System.out.println("How long is the room? Enter the length below: "); // User enters the length of the room
             length = scan.nextDouble();
 
-            System.out.println("How Wide is the room? "); // User enters the width of the room
+            System.out.println("How Wide is the room? Enter the width below: "); // User enters the width of the room
             width = scan.nextDouble();
-            System.out.println("How tall is the room? "); // User enters height of the room
+
+            System.out.println("How tall is the room? Enter the height below: "); // User enters height of the room
             height = scan.nextDouble();
 
             // Area and Perimeter Calculations
