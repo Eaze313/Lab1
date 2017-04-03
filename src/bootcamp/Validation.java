@@ -1,9 +1,14 @@
+/**
+ * RoomCalc.java
+ * Validation Class added on 3/29/17.
+ * This program calculates the perimeter, area,
+ * and volume of a room at based on user input.
+ */
+
+
 package bootcamp;
 import java.util.Scanner;
 
-/**
- * Created by james on 3/29/17.
- */
 public class Validation {
     public static String getString(Scanner sc, String prompt) {
         System.out.println(prompt);
@@ -49,4 +54,49 @@ public class Validation {
         }
         return i;
     }
+
+    public static double getDouble(Scanner sc, String prompt) {
+        double d = 0;
+        boolean isValid = false;
+        while (!isValid)
+        {
+            System.out.print(prompt);
+            if (sc.hasNextDouble())
+            {
+                d = sc.nextDouble();
+                isValid = true;
+            }
+            else
+            {
+                System.out.println("Sorry, that is an invalid entry");
+            }
+            sc.nextLine();  // discard any other data entered on the line
+        }
+        return d;
+    }
+
+    public static double getDouble(Scanner sc, String prompt,
+                                   double min, double max) {
+
+        double d = 0;
+        boolean isValid = false;
+        while (!isValid)
+        {
+            d = getDouble(sc, prompt);
+            if (d < min)
+                System.out.println(
+                        "Error! Number must be positive, and greater than " + min);
+            else if (d > max)
+                System.out.println(
+                        "Error! Number must be " + max + " or less.");
+            else
+                isValid = true;
+        }
+        return d;
+    }
+
 }
+
+
+
+
