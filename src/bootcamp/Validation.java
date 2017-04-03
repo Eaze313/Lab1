@@ -1,10 +1,16 @@
 /**
+ * James Bryant II
+ * 1/30/17
  * RoomCalc.java
- * Validation Class added on 3/29/17.
- * This program calculates the perimeter, area,
- * and volume of a room at based on user input.
+ *
+ * Validation Class added on 3/29/17
+ *
+ * This program calculates the perimeter and area of various classrooms at Grand Circus
+ * based on user input.
+ *
+ * Extended Challenge :
+ * (1)Have the program return the Volume of a room
  */
-
 
 package bootcamp;
 import java.util.Scanner;

@@ -2,10 +2,12 @@
  * James Bryant II
  * 1/30/17
  * RoomCalc.java
+ *
  * This program calculates the perimeter and area of various classrooms at Grand Circus
  * based on user input.
  *
- * Extended Challenge : Have the program return the Volume of a room.
+ * Extended Challenge :
+ * (1)Have the program return the Volume of a room
  */
 
 
@@ -19,7 +21,7 @@ public class RoomCalc {
         int answer = 1;
 
         // Greeting Statement
-        String name = hello(scan);
+        String name = GreetExit.hello(scan);
         System.out.println(" ");
 
 
@@ -55,21 +57,10 @@ public class RoomCalc {
 
         } while (answer == 1);
 
-        System.out.println(bye(name));
+        System.out.println(GreetExit.bye(name));
 
 
 
-    }
-    //Method - Greets User and Gets Their Name
-    public static String hello(Scanner scan) {
-            String name = Validation.getString(scan, "Hello!\nWelcome to My " +
-                    "Room Space Calculator!\n\nPlease Tell Me Your Name: ");
-            return name;
-    }
-
-    //Method - Farewells User
-    public static String bye(String name) {
-        return "Good Bye " + name + ",\nSee you next time";
     }
 
     //Method - Area equals Length x Width
