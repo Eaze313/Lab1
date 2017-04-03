@@ -55,34 +55,34 @@ public class RoomCalc {
 
         } while (answer == 1);
 
-        System.out.println(bye());
+        System.out.println(bye(name));
 
 
 
     }
-
+    //Method - Greets User and Gets Their Name
     public static String hello(Scanner scan) {
             String name = Validation.getString(scan, "Hello!\nWelcome to My " +
                     "Room Space Calculator!\n\nPlease Tell Me Your Name: ");
-
             return name;
-        }
-
-    public static String bye() {
-        return "Thanks, see you next time";
     }
 
-    //Area equals Length x Width
+    //Method - Farewells User
+    public static String bye(String name) {
+        return "Good Bye " + name + ",\nSee you next time";
+    }
+
+    //Method - Area equals Length x Width
     public static double area(double l, double w) {
         return l * w;
     }
 
-    //Perimeter equals Length + Width x 2
+    //Method - Perimeter equals Length + Width x 2
     public static double perimeter(double l, double w) {
         return (l + w) * 2;
     }
 
-    //Volume equals Length x Width x Height
+    //Method - Volume equals Length x Width x Height
     public static double volume(double l, double w, double h) {
         return l * w * h;
     }
